@@ -27,7 +27,7 @@ const Nav = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                to="/inscription"
+                to="/signup"
               >
                 Inscription
               </Link>
