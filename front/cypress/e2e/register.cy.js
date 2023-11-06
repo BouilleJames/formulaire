@@ -11,7 +11,7 @@ describe("Register test", () => {
         .contains("Déjà un compte ?")
         .click();
       // setTimeout(() => {
-      //   cy.url().should("eq", "http://localhost:3000/signin");
+      cy.url().should("eq", "http://localhost:3000/signin");
       // }, 400);
     });
 
@@ -29,7 +29,7 @@ describe("Register test", () => {
       cy.get('input[name="tel"]').type("0401020304");
       cy.get('input[name="password"]').type("Admin12!");
       cy.get('input[name="confirmPassword"]').type("Admin12!");
-      // cy.get('input[name="userName"].is-invalid').should("exist");
+      cy.get('input[name="userName"].is-invalid').should("exist");
       cy.get('button[type="submit"]').should("have.attr", "disabled");
     });
 
